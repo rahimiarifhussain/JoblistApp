@@ -6,11 +6,17 @@ import Navbar from "./components/Navbar"
 import ViewAllJobs from "./components/ViewAllJobs";
 import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
+import JobsPage from "./pages/JobsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import AddJobPage from './pages/AddJobPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/jobs" element={<JobsPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+      <Route path="/add-job" element={<AddJobPage />} />
     </Route>
   ));
 function App() {

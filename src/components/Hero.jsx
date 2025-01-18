@@ -1,6 +1,6 @@
 
 
-function Hero({title, subtitle}) {
+const Hero = ({title, subtitle}) => {
   return (
     <>
       {/* <!-- Hero --> */}

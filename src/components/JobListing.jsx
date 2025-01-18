@@ -3,17 +3,21 @@ import {FaMapMarker} from "react-icons/fa"
 
 const JobListing = ({job}) => {
          const [ShowFullDescription, setShowFullDescription] = useState(false);
-         let description = job.description;
-         if(!ShowFullDescription) {
-            description = description.substring(0, 90) + '...';
-         }
+        for (let index = 0; index < job.length; index++) {
+          // const element = array[index];
+          let description = job[index].description;
+          
+          if(!ShowFullDescription) {
+             description = description.substring(0, 90) + '...';
+          }
+        }
   return (
           <div key={job.id} className="bg-white rounded-xl shadow-md relative">
           <div className="p-4">
             <div className="mb-6">
               <div className="text-gray-600 my-2">{job.type}</div>
               <h3 className="text-xl font-bold">{job.title}</h3>
-            </div>
+            </div> 
 
             <div className="mb-5"> {description}</div>
              <button onClick={()=>setShowFullDescription((prevuse) => !prevuse )}
