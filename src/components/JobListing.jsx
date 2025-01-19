@@ -3,11 +3,12 @@ import {FaMapMarker} from "react-icons/fa"
 
 const JobListing = ({job}) => {
          const [ShowFullDescription, setShowFullDescription] = useState(false);
-         let description = job.description;
+        //  let description = job.description;
+        //  console.log(job);
 
-         if (!ShowFullDescription) {
-           description = description.substring(0, 90) + '...';
-         }
+        //  if (!ShowFullDescription) {
+        //    description = description.substring(0, 90) + '...';
+        //  }
   return (
           // eslint-disable-next-line react/prop-types
           <div key={job.id} className="bg-white rounded-xl shadow-md relative">
