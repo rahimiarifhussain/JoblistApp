@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {FaMapMarker} from "react-icons/fa"
 
+
 const JobListing = ({job}) => {
          const [ShowFullDescription, setShowFullDescription] = useState(false);
         //  let description = job.description;
@@ -18,7 +19,7 @@ const JobListing = ({job}) => {
               <h3 className="text-xl font-bold">{job.title}</h3>
             </div> 
 
-            <div className="mb-5"> {description}</div>
+            <div className="mb-5"> {job.description}</div>
              <button onClick={()=>setShowFullDescription((prevuse) => !prevuse )}
              className="text-indigo-500 mb-5 hover:text-indigo-60">
               {ShowFullDescription? 'Less': 'More'}
