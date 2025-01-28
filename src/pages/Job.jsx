@@ -2,6 +2,7 @@
 import Spinner from './../components/Spinner'; */
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 // import { Navigate } from 'react-router-dom';
 
 const Job = ({deleteJob}) => {
@@ -13,7 +14,8 @@ const Job = ({deleteJob}) => {
   const onDeleteJob =(jobID)=>{
     window.confirm("Are You Sure Delete The Job? ");
       if(!jobID) return;
-      deleteJob(jobID);
+      deleteJob(jobID); 
+      toast.success('Job deleted Successfully');
     return navigate("/jobs")
       
   }

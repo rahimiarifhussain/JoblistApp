@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const EditJob = ({updateJobSubmit}) => {
     const job = useLoaderData();
@@ -37,6 +38,7 @@ const EditJob = ({updateJobSubmit}) => {
         }
         // console.log(updateJo)
         updateJobSubmit(updateJob);
+        toast.success("Job edited successfully");
         return  navigate(`/jobs/${id}`)
 
 

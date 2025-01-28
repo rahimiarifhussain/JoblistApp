@@ -2,7 +2,7 @@
   "jobs": [
     {
       "id": "1",
-      "title": "SRS",
+      "title": "Soiner React Developer ",
       "type": "Full-Time",
       "location": "Boston, MA",
       "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as React or Angular.",
@@ -155,18 +155,22 @@
       }
     },
     {
-      "id": "9c90",
-      "title": "Website Developer",
+      "id": "c6a2",
+      "title": "HR Manager",
       "type": "Full-Time",
-      "location": "ghazni ",
-      "description": "this is simple test",
-      "salary": "Under $50K",
+      "location": "herat",
+      "description": "Manage Some the System ",
+      "salary": "$60K - 70K",
       "company": {
-        "name": "Ariana ICT ",
-        "description": "hire new Progrmmaer",
+        "name": "DABS",
+        "description": "dutes si dutes si dutes si dutes si dutes si ",
         "contactEmail": "ariana@test",
         "contactPhone": "5145454215"
       }
     }
+  ],
+  "services": [
+    {"id":1, "title":"Hosting"},
+    {"id":1, "title":"Hosting"}
   ]
 }

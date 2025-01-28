@@ -12,6 +12,7 @@ import Dashbord from "./components/layouts/Dashbord";
 import NotFoundPage from './pages/NotFoundPage';
 import AddJobs from "./pages/AddJobs";
 import EditJob from "./pages/EditJob";
+import Service from "./pages/services/Service";
 
 
 
@@ -62,6 +63,11 @@ const App = () => {
       <Route path="/jobs/:id" element={<Job deleteJob={deleteJob} />} loader={jobLoader}  />
       <Route path="/editjob/:id" element={<EditJob updateJobSubmit={updateJob} /> } loader={jobLoader} />
       <Route path="*" element={<NotFoundPage />} />
+
+      {/* Services Pages  */}
+      <Route path="/services" element={<Service />} />
+
+
    </Route>
   ));
   return <RouterProvider router={router} />
