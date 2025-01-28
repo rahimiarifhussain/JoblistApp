@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
-const EditJob = ({updatedJob}) => {
+const EditJob = ({updateJobSubmit}) => {
     const job = useLoaderData();
-    const id = useParams();
-    const [type, setType] = useState(job.type);
+    const { id } = useParams();
     const [title, setTitle] = useState(job.title);
+    const [type, setType] = useState(job.type);
+    const [location, setLocation] = useState(job.location);
     const [description, setDescription] = useState(job.description);
     const [salary, setSalary] = useState(job.salary);
-    const [location, setLocation] = useState(job.location);
     const [companyName, setCompanyName] = useState(job.company.name);
-    const [companyDescription, setCompanyDescription] = useState(job.company.description);
+    const [companyDescription, setCompanyDescription] = useState(
+      job.company.description
+    );
     const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
     const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
 
@@ -21,17 +23,20 @@ const EditJob = ({updatedJob}) => {
         e.preventDefault();
         const updateJob = {
             id,
-            type,
             title,
+            type,
+            location,
             description,
             salary,
-            location,
-            companyName,
-            companyDescription,
-            contactEmail,
-            contactPhone
+            company: {
+              name: companyName,
+              description: companyDescription,
+              contactEmail,
+              contactPhone,
+            },
         }
-        updatedJob(updateJob);
+        // console.log(updateJo)
+        updateJobSubmit(updateJob);
         return  navigate(`/jobs/${id}`)
 
 

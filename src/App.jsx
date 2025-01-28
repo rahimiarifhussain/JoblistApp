@@ -39,12 +39,14 @@ const App = () => {
       return;
   }
 
-  const updatedJob = async (job)=> {
-    // console.log(id);
+  const updateJob = async (job)=> {
+    // console.log(job);
+
     const res = await fetch(`/api/jobs/${job.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
+       
       },
       body: JSON.stringify(job),
     });
@@ -58,7 +60,7 @@ const App = () => {
       <Route path="/jobs" element={<Jobs />} />
       <Route path="/addJob" element={<AddJobs submitJobForm={addNewJob} />} />
       <Route path="/jobs/:id" element={<Job deleteJob={deleteJob} />} loader={jobLoader}  />
-      <Route path="/editjob/:id" element={<EditJob updatedJob={updatedJob} /> } loader={jobLoader} />
+      <Route path="/editjob/:id" element={<EditJob updateJobSubmit={updateJob} /> } loader={jobLoader} />
       <Route path="*" element={<NotFoundPage />} />
    </Route>
   ));
