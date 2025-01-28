@@ -125,6 +125,48 @@
         "contactEmail": "contact@teksolutions.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "571b",
+      "title": "HOME Workers",
+      "type": "Full-Time",
+      "location": "Kabul Barchi",
+      "description": "This job is for Home Workers",
+      "salary": "$80K - 90K",
+      "company": {
+        "name": "KTS Software Devlopment",
+        "description": "What is the Most and Diffreent and that is how are you?",
+        "contactEmail": "kts@gmail.com",
+        "contactPhone": "555-555-555"
+      }
+    },
+    {
+      "id": "301a",
+      "title": "MTCNA Specliest",
+      "type": "Full-Time",
+      "location": "Karte-char",
+      "description": "Network + CCNA \nDHCP\nRouter\nIP ADDRESS",
+      "salary": "$70K - 80K",
+      "company": {
+        "name": "ZOOMByte",
+        "description": "Aobut the sknvlan ",
+        "contactEmail": "zoombyte@gmail.com",
+        "contactPhone": "0744382084"
+      }
+    },
+    {
+      "id": "9c90",
+      "title": "Website Developer",
+      "type": "Full-Time",
+      "location": "ghazni ",
+      "description": "this is simple test",
+      "salary": "Under $50K",
+      "company": {
+        "name": "Ariana ICT ",
+        "description": "hire new Progrmmaer",
+        "contactEmail": "ariana@test",
+        "contactPhone": "5145454215"
+      }
     }
   ]
 }
